@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "challenge": "node scripts/add.js",
+    "c": "npm run challenge"
+  }
+}
