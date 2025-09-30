@@ -18,6 +18,6 @@ fs.writeFileSync(filePath, "", { flag: "wx" }); // flag=wx 避免覆盖已有文
 
 // 2. 写入 README.md
 const readmePath = path.join(__dirname, "../README.md");
-fs.appendFileSync(readmePath, `    ${filename}\n`);
+fs.appendFileSync(readmePath, `    - ${filename}\n`);
 
 console.log(`✅ 已创建 src/${filename} 并写入 README.md`);
