@@ -16,8 +16,12 @@ if (!fs.existsSync(srcDir)) {
 const filePath = path.join(srcDir, filename);
 fs.writeFileSync(filePath, "", { flag: "wx" }); // flag=wx 避免覆盖已有文件
 
-// 2. 写入 README.md
-const readmePath = path.join(__dirname, "../README.md");
-fs.appendFileSync(readmePath, `    - ${filename}\n`);
+// 2. 获取当前日期 (YYYY-MM-DD)
+const now = new Date();
+const dateStr = now.toISOString().split("T")[0]; // e.g. "2025-09-30"
 
-console.log(`✅ 已创建 src/${filename} 并写入 README.md`);
+// 3. 写入 README.md
+const readmePath = path.join(__dirname, "../README.md");
+// fs.appendFileSync(readmePath, `    - ${filename}  ${dateStr}\n`);
+fs.appendFileSync(readmePath, `|${filename}|${dateStr}| |\n`);
+console.log(`✅ 已创建 src/${filename} 并写入 README.md (${dateStr})`);

@@ -1,4 +1,8 @@
 # code-evolution-90days
-- src/
-    - 01-debounce & throttle.ts
-    - 02-EventEmmiter.ts
+
+- /src
+
+  | File                      | Created(Date) | Cost(min) |
+  | ------------------------- | ------------- | --------- |
+  | 01-debounce & throttle.ts | 2025-09-29    | 15        |
+  | 02-EventEmmiter.ts        | 2025-09-30    | 45        |
