@@ -24,9 +24,9 @@ bus.emit("touch", "Humm")
 
 //version 1 completed, but it has the problems:
 // current eventRegister can only store for one listener
-// bus.on("click", () => console.log("click1"));
-// bus.on("click", () => console.log("click2"));
-// bus.emit("click", "hi");
+bus.on("click", () => console.log("click1"));
+bus.on("click", () => console.log("click2"));
+bus.emit("click", "hi");
 // it will only return click2, because when we set #2 click event, it will overlap #1 click
 
 // Okay! Let fix it!
@@ -135,3 +135,11 @@ eventEmitterV4.once("click", fnV4);
 eventEmitterV4.emit("click", "onClick");
 eventEmitterV4.emit("click", "onClick");
 eventEmitterV4.emit("click", "onClick");
+
+
+
+
+
+
+
+
